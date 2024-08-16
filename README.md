@@ -32,7 +32,7 @@ A Faculdade API permite o gerenciamento de cursos e estudantes de uma faculdade.
 
 ## Tecnologias utilizadas
 
-- **Java 11**
+- **Java 22**
 - **Spring Boot**
 - **JDBC**
 - **PostgreSQL**
