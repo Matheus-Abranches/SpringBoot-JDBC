@@ -1,4 +1,4 @@
-# Faculdade API
+# Faculdade API 📚
 
 Este projeto é uma API RESTful desenvolvida com Spring Boot, usando JDBC para a conexão com um banco de dados PostgreSQL. O objetivo é gerenciar informações de estudantes e cursos de uma faculdade, permitindo operações CRUD (Create, Read, Update, Delete) sobre essas entidades. A API é executada em um ambiente Docker, e o banco de dados é gerenciado pelo DBeaver.
 
@@ -6,11 +6,8 @@ Este projeto é uma API RESTful desenvolvida com Spring Boot, usando JDBC para a
 
 - [Sobre](#sobre)
 - [Funcionalidades](#funcionalidades)
-- [Instalação](#instalação)
 - [Como usar](#como-usar)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
-- [Contribuições](#contribuições)
-- [Licença](#licença)
 - [Contato](#contato)
 
 ## Sobre
@@ -32,3 +29,20 @@ A Faculdade API permite o gerenciamento de cursos e estudantes de uma faculdade.
 - **createCurso**: Permite a criação de um novo curso.
 - **updateCurso**: Atualiza as informações de um curso existente.
 - **deleteCurso**: Deleta um curso com base no seu ID.
+
+## Tecnologias utilizadas
+
+- **Java 11**
+- **Spring Boot**
+- **JDBC**
+- **PostgreSQL**
+- **Docker**
+- **DBeaver**
+- **Maven**
+
+## Contato
+
+Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato:
+
+- **Email**: [matheusabrancheslimatav@gmail.com](mailto:matheusabrancheslimatav@gmail.com)
+- **LinkedIn**: [https://www.linkedin.com/in/matheusabranches/](https://www.linkedin.com/in/matheusabranches/)
