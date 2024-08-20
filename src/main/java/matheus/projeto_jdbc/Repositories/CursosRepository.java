@@ -13,8 +13,11 @@ import java.util.Optional;
 @Repository
 public class CursosRepository {
 
-    @Autowired
     private JdbcTemplate jdbcTemplate;
+
+    public CursosRepository(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
 
     private RowMapper<Cursos> rowMapper = new RowMapper<Cursos>() {
         @Override

@@ -1,6 +1,7 @@
 package matheus.projeto_jdbc.Services;
 
 import matheus.projeto_jdbc.Models.Estudante;
+import matheus.projeto_jdbc.Repositories.CursosRepository;
 import matheus.projeto_jdbc.Repositories.EstudanteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,8 +11,11 @@ import java.util.Optional;
 @Service
 public class EstudanteService {
 
-    @Autowired
     private EstudanteRepository estudanteRepository;
+
+    public EstudanteService(EstudanteRepository estudanteRepository) {
+        this.estudanteRepository = estudanteRepository;
+    }
 
     public List<Estudante> findAll() {
         return estudanteRepository.findAll();

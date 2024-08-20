@@ -12,8 +12,11 @@ import java.util.Optional;
 @RequestMapping("/api/estudantes")
 public class EstudanteController {
 
-    @Autowired
     private EstudanteService estudanteService;
+
+    public EstudanteController(EstudanteService cursosService) {
+        this.estudanteService = cursosService;
+    }
 
     @GetMapping
     public List<Estudante> getAllEstudantes() {
