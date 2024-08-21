@@ -2,7 +2,6 @@ package matheus.projeto_jdbc.Controllers;
 
 import matheus.projeto_jdbc.Models.Estudante;
 import matheus.projeto_jdbc.Services.EstudanteService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;

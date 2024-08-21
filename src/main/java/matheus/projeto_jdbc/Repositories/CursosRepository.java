@@ -1,17 +1,15 @@
 package matheus.projeto_jdbc.Repositories;
 
+import matheus.projeto_jdbc.Mappers.CursosMapper;
 import matheus.projeto_jdbc.Models.Cursos;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
 @Repository
 public class CursosRepository {
+
 
     private JdbcTemplate jdbcTemplate;
 
@@ -19,25 +17,14 @@ public class CursosRepository {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    private RowMapper<Cursos> rowMapper = new RowMapper<Cursos>() {
-        @Override
-        public Cursos mapRow(ResultSet resultSet, int rowNum) throws SQLException {
-            Cursos cursos = new Cursos();
-            cursos.setId(resultSet.getLong("id"));
-            cursos.setNome(resultSet.getString("nome"));
-            cursos.setConteudo(resultSet.getString("descricao"));
-            return cursos;
-        }
-    };
-
     public List<Cursos> findAll() {
         String sql = "SELECT * FROM curso";
-        return jdbcTemplate.query(sql, rowMapper);
+        return jdbcTemplate.query(sql, new CursosMapper());
     }
 
     public Optional<Cursos> findById(Long id) {
         String sql = "SELECT * FROM curso WHERE id = ?";
-        Cursos curso = jdbcTemplate.queryForObject(sql, new Object[]{id}, rowMapper);
+        Cursos curso = jdbcTemplate.queryForObject(sql, new Object[]{id}, new CursosMapper());
         return Optional.ofNullable(curso);
     }
 
